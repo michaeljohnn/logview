@@ -47,4 +47,35 @@ export interface LogviewProps {
   renderGroupName?: (log: string) => string;
   onDownload?: () => void;
 }
+
+export interface GroupDuration {
+  startLineIndex: number;
+  start: number;
+  end?: number;
+  diff?: number;
+}
+
+export type Theme = 'dark' | 'light';
+
+export interface LogAdvice {
+  description: ReactNode;
+  enableRag: boolean;
+  endLineNum: number;
+  endRegex: string | null;
+  errTypeI18n: string;
+  id: number;
+  name: string;
+  rangeMatch: boolean;
+  solution: ReactNode;
+  startLineNum: number | number[];
+  startRegex: string | null;
+  type: string;
+}
+
+export interface GroupingParams {
+  startMark: string;
+  endMark: string;
+  startRegex: RegExp;
+  endRegex: RegExp;
+}
 ```
