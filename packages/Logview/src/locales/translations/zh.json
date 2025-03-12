@@ -1,0 +1,11 @@
+{
+  "advice.reason": "错误原因",
+  "advice.solution": "解决方案",
+  "error": "错误",
+  "log.advices.title": "日志诊断",
+  "log.oversize.link": "下载完整日志文件",
+  "log.oversize.tip": "当前日志文件过大，页面未完整展示日志信息，请精简日志或点击",
+  "matches": "匹配",
+  "search": "搜索",
+  "spinTips": "日志获取中，请稍等..."
+}

@@ -1,0 +1,11 @@
+{
+  "advice.reason": "오류 원인",
+  "advice.solution": "해결책",
+  "error": "오류",
+  "log.advices.title": "로그 진단",
+  "log.oversize.link": "전체 로그 파일 다운로드",
+  "log.oversize.tip": "현재 로그 파일이 너무 크고 페이지는 전체 로그 정보를 표시할 수 없습니다. 로그를 간소화하거나 여기를 클릭하세요.",
+  "matches": "일치 항목",
+  "search": "검색",
+  "spinTips": "로그가 가져와지고 있습니다. 잠시만 기다려주세요..."
+}

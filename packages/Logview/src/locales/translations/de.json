@@ -1,0 +1,11 @@
+{
+  "advice.reason": "Fehlerursache",
+  "advice.solution": "Lösung",
+  "error": "Fehler",
+  "log.advices.title": "Protokolldiagnose",
+  "log.oversize.link": "Vollständiges Protokolldatei herunterladen",
+  "log.oversize.tip": "Das aktuelle Protokolldatei ist zu groß und die Seite kann nicht alle Protokollinformationen anzeigen. Bitte vereinfachen Sie das Protokoll oder klicken Sie hier.",
+  "matches": "Übereinstimmungen",
+  "search": "Suche",
+  "spinTips": "Das Protokoll wird abgerufen. Bitte warten Sie..."
+}

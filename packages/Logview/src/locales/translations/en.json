@@ -1,0 +1,11 @@
+{
+  "advice.reason": "Error reason",
+  "advice.solution": "solution",
+  "error": "Error",
+  "log.advices.title": "Log diagnosis",
+  "log.oversize.link": "Download full log file",
+  "log.oversize.tip": "The current log file is too large, and the page cannot display the complete log information. Please simplify the log or click.",
+  "matches": "matches",
+  "search": "Search",
+  "spinTips": "The log is being retrieved. Please wait..."
+}

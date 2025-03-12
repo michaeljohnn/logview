@@ -1,0 +1,13 @@
+.savorui-logview-container {
+  .current-log-line {
+    @apply text-foreground;
+
+    .savorui-search-matched {
+      @apply bg-orange-500 text-slate-950;
+    }
+  }
+
+  .savorui-search-matched {
+    @apply bg-yellow-300 text-slate-950;
+  }
+}

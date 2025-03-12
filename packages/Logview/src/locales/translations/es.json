@@ -1,0 +1,11 @@
+{
+  "advice.reason": "Motivo del error",
+  "advice.solution": "solución",
+  "error": "Error",
+  "log.advices.title": "Diagnóstico del registro",
+  "log.oversize.link": "Descargar archivo de registro completo",
+  "log.oversize.tip": "El archivo de registro actual es demasiado grande y la página no puede mostrar toda la información del registro. Por favor, simplifique el registro o haga clic aquí.",
+  "matches": "coincidencias",
+  "search": "Buscar",
+  "spinTips": "Se está recuperando el registro. Por favor, espere..."
+}

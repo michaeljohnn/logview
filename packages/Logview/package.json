@@ -1,0 +1,74 @@
+{
+  "name": "@savorui/logview",
+  "version": "1.0.1",
+  "description": "Log browsing components that support virtual scrolling and log collapse",
+  "files": [
+    "esm",
+    "es2017",
+    "cjs",
+    "dist"
+  ],
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "sideEffects": [
+    "dist/*",
+    "*.scss",
+    "*.less",
+    "*.css"
+  ],
+  "scripts": {
+    "dev": "rspack serve -c ./dev/rspack.config.ts",
+    "watch": "tsup --watch",
+    "build": "tsup",
+    "prepublishOnly": "npm run build",
+    "eslint": "eslint --cache --ext .js,.jsx,.ts,.tsx,.json ./",
+    "eslint:fix": "npm run eslint -- --fix",
+    "stylelint": "stylelint \"**/*.{css,scss,less}\"",
+    "lint": "npm run eslint && npm run stylelint"
+  },
+  "keywords": [
+    "ice",
+    "react",
+    "component"
+  ],
+  "dependencies": {
+    "@tanstack/react-virtual": "^3.11.1",
+    "ahooks": "^3.8.4",
+    "ansi-html": "^0.0.9",
+    "i18next": "^24.2.1",
+    "lucide-react": "^0.479.0",
+    "react-i18next": "^15.4.0",
+    "split.js": "^1.6.5"
+  },
+  "devDependencies": {
+    "@rspack/cli": "^1.2.7",
+    "@rspack/core": "^1.2.7",
+    "@rspack/plugin-react-refresh": "^1.0.1",
+    "@types/ansi-html": "^0.0.0",
+    "@types/js-yaml": "^4.0.9",
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "autoprefixer": "^10.4.20",
+    "cross-env": "^7.0.3",
+    "eslint": "^8.0.0",
+    "postcss": "^8.4.47",
+    "postcss-loader": "^8.1.1",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-refresh": "^0.16.0",
+    "stylelint": "^15.0.0",
+    "tailwindcss": "^3.4.14",
+    "ts-node": "^10.9.2",
+    "tsup": "^8.3.5",
+    "typescript": "^5.7.3"
+  },
+  "peerDependencies": {
+    "react": "^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0",
+    "react-dom": "^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0"
+  },
+  "license": "MIT",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  }
+}

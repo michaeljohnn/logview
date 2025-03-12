@@ -1,0 +1,14 @@
+node_modules
+.travis.yml
+*.swp
+.sass-cache
+.DS_Store
+.idea
+*.tmp
+*.bak
+tsconfig.tsbuildinfo
+tmp
+temp
+coverage
+__mockdef
+npm-debug.log

@@ -1,0 +1,11 @@
+{
+  "advice.reason": "エラーの原因",
+  "advice.solution": "解決策",
+  "error": "エラー",
+  "log.advices.title": "ログ診断",
+  "log.oversize.link": "完全なログファイルをダウンロード",
+  "log.oversize.tip": "現在のログファイルが大きすぎて、ページはすべてのログ情報を表示できません。ログを簡素化するか、ここをクリックしてください。",
+  "matches": "一致",
+  "search": "検索",
+  "spinTips": "ログが取得されています。お待ちください..."
+}

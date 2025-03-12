@@ -1,0 +1,6 @@
+button {
+  @apply py-2 px-4 border-none cursor-pointer bg-slate-200 text-slate-900;
+  &.active {
+    @apply bg-slate-500 text-white;
+  }
+}

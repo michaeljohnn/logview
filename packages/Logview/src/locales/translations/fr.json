@@ -1,0 +1,11 @@
+{
+  "advice.reason": "Raison de l'erreur",
+  "advice.solution": "Solution",
+  "error": "Erreur",
+  "log.advices.title": "Diagnostic du journal",
+  "log.oversize.link": "Télécharger le fichier de journal complet",
+  "log.oversize.tip": "Le fichier de journal actuel est trop volumineux et la page ne peut pas afficher toutes les informations de journal. Veuillez simplifier le journal ou cliquer ici.",
+  "matches": "correspondances",
+  "search": "Recherche",
+  "spinTips": "Le journal est en cours de récupération. Merci de patienter..."
+}
