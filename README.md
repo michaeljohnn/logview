@@ -20,6 +20,8 @@ npm run dev
 ```tsx
 import Logview from '@savorui/logview';
 
+const logs_simple = ['hello world'];
+
 <Logview logs={logs_simple} theme='dark' />
 ```
 
