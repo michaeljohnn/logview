@@ -1,6 +1,6 @@
 {
   "name": "@savorui/logview",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Log browsing components that support virtual scrolling and log collapse",
   "files": [
     "esm",
@@ -28,9 +28,16 @@
     "lint": "npm run eslint && npm run stylelint"
   },
   "keywords": [
-    "ice",
+    "logview",
     "react",
-    "component"
+    "log",
+    "log-view",
+    "log-viewer",
+    "log-browser",
+    "log-view-react",
+    "viewer",
+    "preview",
+    "log-preview"
   ],
   "dependencies": {
     "@tanstack/react-virtual": "^3.11.1",
