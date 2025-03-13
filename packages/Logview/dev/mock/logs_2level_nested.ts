@@ -3,7 +3,7 @@ export default [
   '::group::this is log 2::1732772136194', 
   'this is log 3', 
   '::group::this is log 4::1732772136198', 
-  'this is log 5',
+  'this is \u001b[31m[builder]log 5',
   '::endgroup::1732772136291', 
   'this is log 7', 
   '::endgroup::1732772136298', 

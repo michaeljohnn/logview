@@ -10,10 +10,11 @@ import { searchByKeyword } from '../../utils/search';
 interface UseSearchProps {
   logs: string[];
   grouping: GroupingParams | undefined;
+  setExpandGroups: (set: Set<string> | ((set: Set<string>) => Set<string>)) => void;
 }
 
 export default function useSearch(props: UseSearchProps) {
-  const { logs, grouping } = props;
+  const { logs, grouping, setExpandGroups } = props;
 
   const [searchMatchedLogIndexs, setSearchMatchedLogIndexs] = useState<number[]>([]);
   const [highlightedLogs, setHighlightedLogs] = useState<ParsedLog[]>([]);
@@ -22,7 +23,11 @@ export default function useSearch(props: UseSearchProps) {
 
   useThrottleEffect(
     () => {
-      const newParsedLogs = parseLogs(logs, { grouping });
+      const { logs: newParsedLogs, errorLineGroupIdSet } = parseLogs(logs, { grouping });
+
+      setExpandGroups((set) => {
+        return new Set([...set, ...errorLineGroupIdSet]);
+      });
 
       logger.debug('updateParsedLogs', logs.length);
 

@@ -2,6 +2,7 @@ import type { ReactNode } from 'react';
 
 export interface ParsedLog {
   index: number;
+  type: 'error' | 'warning' | 'info';
   group:
     | {
         id: string; // current level group id

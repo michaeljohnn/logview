@@ -83,6 +83,7 @@ export default function Logview(props: LogviewProps) {
   const { keyword, onDebounceSearch, searchMatchedLogIndexs, highlightedLogs } = useSearch({
     logs,
     grouping,
+    setExpandGroups,
   });
 
   const {
@@ -117,8 +118,24 @@ export default function Logview(props: LogviewProps) {
     }
   }, [currentLogIndexProps]);
 
+  // auto scroll
   useThrottleEffect(
     () => {
+      // scroll to the first advice while advices exist
+      if (advices?.length) {
+        const firstAdvice = advices?.[0];
+        if (firstAdvice) {
+          const logIndex =
+            typeof firstAdvice.startLineNum === 'number'
+              ? firstAdvice.startLineNum
+              : firstAdvice.startLineNum[0];
+          logIndex && setCurrentLogIndex(logIndex);
+        }
+
+        return;
+      }
+
+      // scroll to the last line while advices not exist
       setTimeout(() => {
         scrollToLine(logs.length);
       }, SCROLL_THROTTLE_WAIT);

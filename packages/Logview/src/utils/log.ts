@@ -58,13 +58,31 @@ export function parseLog(log: string, { grouping }: ParseOptions) {
   };
 }
 
-export function parseLogs(logs: string[], { grouping }: ParseOptions): ParsedLog[] {
+
+const LOG_ERROR_MATCHES = ['\x1b[31m', 'ERROR', 'error', 'Error'];
+const LOG_WARNING_MATCHES = ['\x1b[33m', 'WARNING', 'warning', 'Warning'];
+
+export function getLogLineType(logLine: string): ParsedLog['type'] {
+  if (!!LOG_ERROR_MATCHES.find((match) => logLine.includes(match))) {
+    return 'error';
+  }
+
+  if (!!LOG_WARNING_MATCHES.find((match) => logLine.includes(match))) {
+    return 'warning';
+  }
+
+  return 'info';
+}
+
+export function parseLogs(logs: string[], { grouping }: ParseOptions): { logs: ParsedLog[]; errorLineGroupIdSet: Set<string> }  {
   const groupStack: string[] = [];
   let groupIndex = 0;
 
   const parsedLogs: ParsedLog[] = [];
 
   const groupDurationMap = new Map<string, GroupDuration>();
+
+  const errorLineGroupIdSet = new Set<string>();
 
   // ignore groupend line
   let logLineIndex = 0;
@@ -82,8 +100,19 @@ export function parseLogs(logs: string[], { grouping }: ParseOptions): ParsedLog
       groupDurationMap.set(currentGroupId, { start: duration.start, startLineIndex: logLineIndex });
     }
 
+    const logType = getLogLineType(log);
+
+    if (logType === 'error' && groupStack.length > 0) {
+      // add group chain to errorLineGroupIdSet
+      groupStack.forEach((groupId) => {
+        errorLineGroupIdSet.add(groupId);
+      });
+    }
+
+
     const obj: ParsedLog = {
       index: logLineIndex,
+      type: logType,
       group: currentGroupId
         ? {
             id: currentGroupId,
@@ -123,7 +152,7 @@ export function parseLogs(logs: string[], { grouping }: ParseOptions): ParsedLog
     }
   });
 
-  return parsedLogs;
+  return { logs: parsedLogs, errorLineGroupIdSet };
 }
 
 interface GetVirtualItemIndexLogMappingProps {
