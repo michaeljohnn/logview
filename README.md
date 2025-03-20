@@ -1,5 +1,5 @@
 # @savorui/logview
-A high-performance UI log component with virtual scrolling, search functionality, and collapsible log sections, capable of handling large-scale datasets efficiently.
+A high-performance ANSI React log viewer component with virtual scrolling, search functionality, ansi escape code support and collapsible log sections, capable of handling large-scale datasets efficiently.
 
 <img width="1308" alt="image" src="https://github.com/user-attachments/assets/f14a654c-4211-4152-af41-47e0127e39a9" />
 
