@@ -1,7 +1,7 @@
 {
   "name": "@savorui/logview",
   "version": "1.0.4",
-  "description": "Log browsing components that support virtual scrolling and log collapse",
+  "description": "A high-performance ANSI React log viewer component with virtual scrolling, search functionality, ansi escape code support and collapsible log sections, capable of handling large-scale datasets efficiently.",
   "files": [
     "esm",
     "es2017",
